@@ -1,0 +1,18 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - echo "start creating an image with dockerfile"
+  - docker build -t leew/docker-react-app -f Dockerfile.dev .
+
+# 실행할 스크립트(테스트 실행)
+script:
+  - docker run -e CI=true leew/docker-react-app npm run test -- --coverage
+
+# 테스트 성공 후에 할 일 
+after_success:
+  - echo "Test Success"
