@@ -1,0 +1,13 @@
+FROM node:14
+
+WORKDIR /usr/src/app
+
+COPY package.json ./
+
+# 종속성을 내려받았다면 package.json에 명시된 애플리케이션을 위한 종속성들을 내려받자. 
+RUN npm install 
+
+COPY ./ ./
+
+# 컨테이너가 시작되면 실행할 명령어
+CMD ["npm", "run", "start"] 
