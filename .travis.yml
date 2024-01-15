@@ -26,7 +26,7 @@ deploy:
   bucket_name: elasticbeanstalk-ap-northeast-2-730335320831 # AWS S3 가서 확인해야 함 
   bucket_path: docker-react-app
   on:
-    branch: master
+    branch: main
   
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_ACCESS_KEY
