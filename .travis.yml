@@ -21,10 +21,10 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   region: ap-northeast-2
-  app: docker-single-app
-  env: DockerSingleApp-env
+  app: docker-react-app
+  env: DockerReactApp-env
   bucket_name: elasticbeanstalk-ap-northeast-2-730335320831 # AWS S3 가서 확인해야 함 
-  bucket_path: docker-single-app
+  bucket_path: docker-react-app
   on:
     branch: main
   
